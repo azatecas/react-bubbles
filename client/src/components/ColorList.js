@@ -47,6 +47,11 @@ const ColorList = ({ colors, updateColors, setUpdate }) => {
       .then(res => {
         console.log('res for editing',res);
         setUpdate(true);
+        setAddColor({
+          color: "",
+          code: { hex: "" },
+          id: Date.now()
+        })
       })
       .catch(err => {
         console.log('error updateing', err);
