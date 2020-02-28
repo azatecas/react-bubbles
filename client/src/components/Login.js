@@ -25,7 +25,7 @@ const Login = () => {
     axiosWithAuth()
       .post(`/api/login`, login)
       .then(res => {
-        console.log(res);
+        // console.log(res);
         window.localStorage.setItem('token', res.data.payload);
         history.push('/bubblepage')
       })
